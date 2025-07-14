@@ -18,6 +18,9 @@ def main():
     info.subscribe({"type": "userNonFundingLedgerUpdates", "user": address}, print)
     info.subscribe({"type": "webData2", "user": address}, print)
     info.subscribe({"type": "bbo", "coin": "ETH"}, print)
+    info.subscribe({"type": "activeAssetCtx", "coin": "BTC"}, print)  # Perp
+    info.subscribe({"type": "activeAssetCtx", "coin": "@1"}, print)  # Spot
+    info.subscribe({"type": "activeAssetData", "user": address, "coin": "BTC"}, print)  # Perp only
 
 
 if __name__ == "__main__":
